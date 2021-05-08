@@ -27,16 +27,23 @@ towaru, automat sprawdza czy towar jest dostepny i czy moze wydać reszte
 Testy
 
 1.Sprawdzenie ceny jednego towaru - oczekiwana informacja o cenie.
+
 2.Wrzucenie odliczonej kwoty, zakup towaru - oczekiwany brak reszty.
+
 3.Wrzucenie wiekszej kwoty, zakup towaru - oczekiwana reszta.
+
 4.Wykupienie calego asortymentu, proba zakupu po wyczerpaniu towaru -
 oczekiwana informacja o braku.
+
 5.Sprawdzenie ceny towaru o nieprawidtowym numerze (<30 lub >50) -
 oczekiwana informacja o błędzie
+
 6.Wrzucenie kilku monet, przerwanie transakcji - oczekiwany zwrot monet.
+
 7.Wrzucenie za małej kwoty, wybranie poprawnego numeru towaru, wrzucenie
 reszty monet do odliczonej kwoty, ponowne wybranie poprawnego numeru towaru
-- oczekiwany brak reszty.
+ - oczekiwany brak reszty.
+
 8.Zakup towaru placac po 1 gr - suma stu monet ma byé równa 1zł (dla floatow
 suma sto razy 0,01+0,01+...+0.01 nie bedzie równa 1.0), Platności mozna dokonać
 za pomoca petli for w interpreterze.
