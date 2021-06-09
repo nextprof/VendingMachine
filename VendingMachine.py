@@ -121,7 +121,7 @@ class VendingMachine:
 
     def payment(self, product_number):
         """
-        Funkcja sprawdza czy istnieje produkt o takim numerze, jeżeli nie zgłasza InvalidProductNumberException,
+        Metoda sprawdza czy istnieje produkt o takim numerze, jeżeli nie zgłasza InvalidProductNumberException,
         jeżeli produkt istnieje, ale jest niedostępny zgłasza ProductUnavailableException,
         jeżeli wartość wprowadzonych monet jest niewystarczająca zgłasza NotEnoughMoneyException
         Ilość produktu zostaje zmniejszona o 1, jeżeli trzeba wydać resztę zwraca ją.
