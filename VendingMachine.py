@@ -1,3 +1,5 @@
+import logging
+
 from Exceptions import *
 
 
@@ -74,13 +76,15 @@ class VendingMachine:
     def __init__(self):
         super().__init__()
 
+        logging.basicConfig(level=0, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
         self.init_products()
 
         self.init_coins_dicts()
 
     def init_coins_dicts(self):
         """
-        Funkcja inicjalizująca stan monet automatu na 1 posiadaną monetę każdego typu
+        Metoda inicjalizująca stan monet automatu na 1 posiadaną monetę każdego typu
         """
 
         self.coins = {
@@ -88,6 +92,7 @@ class VendingMachine:
             for c
             in self.coin_types
         }
+
     @staticmethod
     def get_inserted(coins):
         """
@@ -224,8 +229,10 @@ class VendingMachine:
 
     def init_products(self):
         """
-        Klasa inicjująca stan automatu wprowadzająca 20 produktów o różnych cenach z różnymi numerami produktu 30-50
+        Metoda inicjująca stan automatu wprowadzająca 20 produktów o różnych cenach z różnymi numerami produktu 30-50
         """
+
+        logging.debug('Produkty zostały dodane')
         self.products[30] = Product("Woda 0.3l", 150)
         self.products[31] = Product("Woda 0.5l", 200)
         self.products[32] = Product("Coca-Cola 0.3l", 250)
