@@ -80,7 +80,7 @@ class VendingMachine:
 
     def init_coins_dicts(self):
         """
-        Klasa inicjalizująca stan monet automatu na 1 posiadaną monetę każdego typu
+        Funkcja inicjalizująca stan monet automatu na 1 posiadaną monetę każdego typu
         """
 
         self.coins = {
