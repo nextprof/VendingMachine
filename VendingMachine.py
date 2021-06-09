@@ -89,12 +89,13 @@ class VendingMachine:
             in self.coin_types
         }
 
-    def get_inserted(self):
+    @staticmethod
+    def get_inserted(coins):
         """
         :return: zwraca słownik wrzuconych monet przez klienta
         """
-        return {key: self.coins[key]['inserted'] for key, value in self.coins.items() if
-                self.coins[key]['inserted'] > 0}
+        return {key: coins[key]['inserted'] for key, value in coins.items() if
+                coins[key]['inserted'] > 0}
 
     def get_inserted_value(self):
         """
@@ -203,7 +204,7 @@ class VendingMachine:
         """
         if self.get_inserted_value() == 0:
             raise WithdrawException
-        all_inserted = self.get_inserted().copy()
+        all_inserted = self.get_inserted(self.coins).copy()
         self.clear_inserted()
         return all_inserted
 
