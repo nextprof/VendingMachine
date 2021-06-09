@@ -88,7 +88,6 @@ class VendingMachine:
             for c
             in self.coin_types
         }
-
     @staticmethod
     def get_inserted(coins):
         """
